@@ -1,0 +1,882 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Renora Consulting | Recruitment & HR Solutions</title>
+
+<meta name="description" content="Renora Consulting provides professional recruitment and HR solutions for growing businesses across India and international markets.">
+<meta name="keywords" content="Renora Consulting, recruitment consultancy, manpower recruitment, HR solutions, talent acquisition, staffing">
+<meta name="author" content="Renora Consulting">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e8ebf0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #102a43;
+}
+
+.logo span {
+    color: #1d72b8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #39465a;
+}
+
+.nav-links a:hover {
+    color: #1d72b8;
+}
+
+.nav-contact {
+    background: #102a43;
+    color: white !important;
+    padding: 11px 20px;
+    border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #f4f8fc 0%, #ffffff 65%);
+    padding: 95px 0 90px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f3fb;
+    color: #17659c;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    color: #102a43;
+}
+
+.hero h1 span {
+    color: #1d72b8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #5b6778;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn-primary {
+    background: #102a43;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d72b8;
+}
+
+.btn-secondary {
+    border: 1px solid #cbd5df;
+    background: #ffffff;
+    color: #102a43;
+}
+
+.hero-card {
+    background: #102a43;
+    color: #ffffff;
+    padding: 42px;
+    border-radius: 14px;
+    box-shadow: 0 18px 45px rgba(16,42,67,0.15);
+}
+
+.hero-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #dce7f1;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-list {
+    list-style: none;
+}
+
+.hero-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: 15px;
+}
+
+.hero-list li:last-child {
+    border-bottom: none;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 85px 0;
+}
+
+.section-light {
+    background: #f7f9fb;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: #102a43;
+    margin-bottom: 13px;
+}
+
+.section-heading p {
+    color: #667386;
+}
+
+/* SERVICES */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(16,42,67,0.08);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    background: #eaf4fb;
+    color: #1d72b8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #102a43;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #687588;
+    font-size: 15px;
+}
+
+/* TWO COLUMN */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.two-column h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #102a43;
+    margin-bottom: 18px;
+}
+
+.two-column p {
+    color: #687588;
+    margin-bottom: 18px;
+}
+
+.check-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.check-list li {
+    margin: 12px 0;
+    font-weight: 600;
+    color: #344256;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: #1d72b8;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.info-box {
+    background: #102a43;
+    color: white;
+    padding: 45px;
+    border-radius: 14px;
+}
+
+.info-box h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    color: #dce7f1;
+}
+
+/* PROCESS */
+.process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-item {
+    text-align: center;
+    padding: 25px;
+}
+
+.number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #102a43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-weight: 800;
+}
+
+.process-item h3 {
+    margin-bottom: 8px;
+    color: #102a43;
+}
+
+.process-item p {
+    color: #687588;
+    font-size: 14px;
+}
+
+/* FAQ */
+.faq {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: #ffffff;
+    border: 1px solid #e2e7ed;
+    border-radius: 8px;
+    padding: 19px 22px;
+    margin-bottom: 12px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #102a43;
+}
+
+details p {
+    padding-top: 13px;
+    color: #687588;
+}
+
+/* CONTACT */
+.contact-box {
+    background: #102a43;
+    color: white;
+    padding: 55px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.contact-box p {
+    color: #dce7f1;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.contact-details div {
+    font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #0b1e30;
+    color: #ffffff;
+    padding: 45px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+}
+
+footer p,
+footer li {
+    color: #b9c6d3;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 8px 0;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+    color: #91a0af;
+    font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero-grid,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-card {
+        padding: 30px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2,
+    .two-column h2,
+    .contact-box h2 {
+        font-size: 30px;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 35px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">Renora<span> Consulting</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#employers">For Employers</a></li>
+            <li><a href="#candidates">For Candidates</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div>
+            <div class="badge">RECRUITMENT & HR SOLUTIONS</div>
+
+            <h1>
+                Connecting the right
+                <span>people</span> with the right opportunities.
+            </h1>
+
+            <p>
+                Renora Consulting helps growing businesses find the right talent
+                through focused recruitment, staffing and HR solutions.
+            </p>
+
+            <div class="buttons">
+                <a href="#employers" class="btn btn-primary">Hire Talent</a>
+                <a href="#candidates" class="btn btn-secondary">Find Opportunities</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>People. Talent. Growth.</h3>
+            <p>
+                Practical recruitment support designed around your business
+                requirements and hiring goals.
+            </p>
+
+            <ul class="hero-list">
+                <li>✓ Talent Acquisition</li>
+                <li>✓ Recruitment & Staffing</li>
+                <li>✓ HR Support</li>
+                <li>✓ Candidate Sourcing</li>
+                <li>✓ Team & Workforce Solutions</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- EMPLOYERS -->
+<section id="employers">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>For Employers</h2>
+            <p>
+                Recruitment solutions designed to help businesses build
+                capable and reliable teams.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">👥</div>
+                <h3>Permanent Recruitment</h3>
+                <p>
+                    End-to-end recruitment support to identify and connect
+                    businesses with suitable professionals.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Contract Staffing</h3>
+                <p>
+                    Flexible staffing solutions for organizations requiring
+                    skilled professionals for specific business requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>HR Solutions</h3>
+                <p>
+                    Practical HR support for growing businesses, including
+                    recruitment coordination and workforce requirements.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-light" id="about">
+    <div class="container two-column">
+
+        <div>
+            <h2>Recruitment with a human approach.</h2>
+
+            <p>
+                Renora Consulting is a growing recruitment and HR consulting
+                firm focused on connecting organizations with the people they
+                need to grow.
+            </p>
+
+            <p>
+                We believe effective recruitment is more than filling a
+                vacancy. It is about understanding business requirements,
+                identifying relevant talent and creating a strong connection
+                between employers and candidates.
+            </p>
+
+            <ul class="check-list">
+                <li>Focused candidate sourcing</li>
+                <li>Business-oriented recruitment</li>
+                <li>Professional communication</li>
+                <li>Long-term relationship building</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Our Approach</h3>
+            <p>
+                We work closely with employers to understand their hiring
+                requirements and provide focused recruitment support.
+            </p>
+            <br>
+            <p>
+                For candidates, we aim to provide relevant opportunities
+                aligned with their skills and career goals.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CANDIDATES -->
+<section id="candidates">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>For Candidates</h2>
+            <p>
+                Explore opportunities and take the next step in your career.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💼</div>
+                <h3>Career Opportunities</h3>
+                <p>
+                    Discover relevant job opportunities based on your
+                    experience, skills and career interests.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Relevant Matching</h3>
+                <p>
+                    We focus on understanding candidate profiles and connecting
+                    them with suitable opportunities.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤝</div>
+                <h3>Career Support</h3>
+                <p>
+                    Receive professional communication and guidance throughout
+                    the recruitment process.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-light">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>How We Work</h2>
+            <p>A simple and focused approach to recruitment.</p>
+        </div>
+
+        <div class="process">
+
+            <div class="process-item">
+                <div class="number">01</div>
+                <h3>Understand</h3>
+                <p>We understand the role, business and hiring requirements.</p>
+            </div>
+
+            <div class="process-item">
+                <div class="number">02</div>
+                <h3>Source</h3>
+                <p>We identify and source relevant candidates.</p>
+            </div>
+
+            <div class="process-item">
+                <div class="number">03</div>
+                <h3>Connect</h3>
+                <p>We coordinate communication between employers and candidates.</p>
+            </div>
+
+            <div class="process-item">
+                <div class="number">04</div>
+                <h3>Support</h3>
+                <p>We support the recruitment process through closure.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Frequently Asked Questions</h2>
+            <p>Some common questions about Renora Consulting.</p>
+        </div>
+
+        <div class="faq">
+
+            <details>
+                <summary>What recruitment services do you provide?</summary>
+                <p>
+                    We provide recruitment, staffing and HR support solutions
+                    based on business requirements.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can employers contact Renora Consulting for hiring requirements?</summary>
+                <p>
+                    Yes. Employers can contact us through the Contact section
+                    to discuss their hiring requirements.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can candidates submit their profiles?</summary>
+                <p>
+                    Yes. Candidates can contact us and share their profile or
+                    resume for relevant opportunities.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do you support growing companies?</summary>
+                <p>
+                    Yes. Our recruitment solutions are designed to support
+                    businesses with their talent and workforce requirements.
+                </p>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Let's build the right team.</h2>
+
+            <p>
+                Whether you are looking to hire talent or explore your next
+                career opportunity, get in touch with Renora Consulting.
+            </p>
+
+            <a href="mailto:contact@renoraconsulting.com"
+               class="btn btn-secondary">
+                Contact Renora Consulting
+            </a>
+
+            <div class="contact-details">
+                <div>📧 contact@renoraconsulting.com</div>
+                <div>📍 Chennai, Tamil Nadu, India</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>Renora Consulting</h3>
+                <p>
+                    Recruitment and HR solutions for growing businesses
+                    and professionals.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#employers">For Employers</a></li>
+                    <li><a href="#candidates">For Candidates</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li>Recruitment</li>
+                    <li>Staffing</li>
+                    <li>Talent Acquisition</li>
+                    <li>HR Solutions</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Renora Consulting. All rights reserved.
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
